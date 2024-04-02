@@ -36,7 +36,7 @@ jobs:
                 labels: ['patch']
               - type: 'feature'
                 nouns: ['feat']
-                labels: ['minor']
+                labels: ['minor','enhancement']
               - type: 'breaking_change'
                 nouns: ['breaking', 'major']
                 labels: ['major']
