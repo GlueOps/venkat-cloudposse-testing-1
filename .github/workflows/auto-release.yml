@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: cloudposse/github-action-auto-release@866180107092a985cadc864c327cb555c2331e6f # v2
         with:
-          prerelease: false
+          prerelease: true
+          prerelease-identifier: 'alpha'
           publish: true
