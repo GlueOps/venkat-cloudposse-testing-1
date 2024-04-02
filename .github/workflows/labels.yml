@@ -9,6 +9,17 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Validate Conventional Commit Spec
+        uses: webiny/action-conventional-commits@v1.3.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, for private repositories.
+          allowed-commit-types: "fix,docs,style,refactor,test,chore,pref,ci,chore"
+        
       - name: Execute assign labels
         id: action-assign-labels
         uses: mauroalderete/action-assign-labels@v1
@@ -28,3 +39,7 @@ jobs:
                 labels: ['major']
           maintain-labels-not-matched: false
           apply-changes: true
+
+
+  
+
