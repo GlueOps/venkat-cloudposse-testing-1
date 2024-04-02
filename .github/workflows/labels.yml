@@ -1,4 +1,4 @@
-name: PR Labels
+name: PR Checks and Labels
 
 
 on: 
@@ -6,7 +6,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  say_hello:
+  PR_CHECKS_AND_LABELS:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
