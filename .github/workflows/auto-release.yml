@@ -13,4 +13,4 @@ jobs:
         with:
           prerelease: true
           prerelease-identifier: 'alpha'
-          publish: true
+          publish: false
