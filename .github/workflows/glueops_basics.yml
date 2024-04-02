@@ -6,7 +6,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  call-workflow-passing-data:
+  PR_CHECKS_AND_LABELS:
     uses: GlueOps/github-workflows/.github/workflows/glueops-basic-pr-checks.yml@feat/adding-new-pr-check-workflows
     secrets: inherit
 
