@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-      - master
-      - production
   workflow_dispatch:
 
 jobs:
@@ -14,4 +12,4 @@ jobs:
       - uses: cloudposse/github-action-auto-release@v1
         with:
           prerelease: false
-          publish: false
+          publish: true
