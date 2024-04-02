@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: GlueOps/github-workflows/.github/workflows/glueops-basic-pr-checks.yml@main
+    uses: GlueOps/github-workflows/.github/workflows/glueops-basic-pr-checks.yml@feat/adding-new-pr-check-workflows
     secrets: inherit
 
 # name: PR Checks and Labels
