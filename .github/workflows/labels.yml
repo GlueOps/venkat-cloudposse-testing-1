@@ -10,22 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Validate Conventional Commit Spec
-        uses: webiny/action-conventional-commits@v1.3.0
+        uses: webiny/action-conventional-commits@8bc41ff4e7d423d56fa4905f6ff79209a78776c7 # v1.3.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, for private repositories.
           allowed-commit-types: "fix,docs,style,refactor,test,chore,pref,ci,chore,feat,breaking,major,revert"
 
       - name: Add default PR Labels
-        uses: actions/labeler@v5
+        uses: actions/labeler@8558fd74291d67161a8a78ce36a881fa63b766a9 # v5
 
       - name: Execute assign labels
         id: action-assign-labels
-        uses: mauroalderete/action-assign-labels@v1
+        uses: mauroalderete/action-assign-labels@762b1609dfd32cc7549a39fb169f47742a994d13 # v1
         with:
           pull-request-number: ${{ github.event.pull_request.number }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
