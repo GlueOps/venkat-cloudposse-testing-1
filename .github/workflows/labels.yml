@@ -18,7 +18,7 @@ jobs:
         uses: webiny/action-conventional-commits@v1.3.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, for private repositories.
-          allowed-commit-types: "fix,docs,style,refactor,test,chore,pref,ci,chore"
+          allowed-commit-types: "fix,docs,style,refactor,test,chore,pref,ci,chore,feat,BREAKING CHANGE,BREAKING,MAJOR"
         
       - name: Execute assign labels
         id: action-assign-labels
