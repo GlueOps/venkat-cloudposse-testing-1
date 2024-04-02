@@ -18,13 +18,13 @@ jobs:
           conventional-commits: |
             conventional-commits:
               - type: 'fix'
-                nouns: ['FIX', 'Fix', 'fix', 'FIXED', 'Fixed', 'fixed']
-                labels: ['bug']
+                nouns: ['fix', 'docs', 'style', 'refactor', 'test', 'chore', 'pref', 'ci', 'chore']
+                labels: ['patch']
               - type: 'feature'
-                nouns: ['FEATURE', 'Feature', 'feature', 'FEAT', 'Feat', 'feat']
-                labels: ['feature']
+                nouns: ['feat']
+                labels: ['minor']
               - type: 'breaking_change'
                 nouns: ['BREAKING CHANGE', 'BREAKING', 'MAJOR']
-                labels: ['BREAKING CHANGE']
-          maintain-labels-not-matched: true
+                labels: ['major']
+          maintain-labels-not-matched: false
           apply-changes: true
