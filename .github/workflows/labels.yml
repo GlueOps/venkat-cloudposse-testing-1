@@ -35,7 +35,7 @@ jobs:
                 nouns: ['feat']
                 labels: ['minor']
               - type: 'breaking_change'
-                nouns: ['BREAKING CHANGE', 'BREAKING', 'MAJOR']
+                nouns: ['breaking', 'major']
                 labels: ['major']
           maintain-labels-not-matched: false
           apply-changes: true
