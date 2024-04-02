@@ -19,7 +19,10 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Optional, for private repositories.
           allowed-commit-types: "fix,docs,style,refactor,test,chore,pref,ci,chore,feat,breaking,major,revert"
-        
+
+      - name: Add default PR Labels
+        uses: actions/labeler@v5
+
       - name: Execute assign labels
         id: action-assign-labels
         uses: mauroalderete/action-assign-labels@v1
