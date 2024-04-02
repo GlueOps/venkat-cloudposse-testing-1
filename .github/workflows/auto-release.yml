@@ -9,7 +9,7 @@ jobs:
   auto-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: cloudposse/github-action-auto-release@v1
+      - uses: cloudposse/github-action-auto-release@a3ceaacc83edc83ccbfc1d200b958e1afbf5fabe # v1
         with:
           prerelease: false
           publish: true
